@@ -15,7 +15,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 border-t-4 border-primary bg-secondary">
+    <section id="skills" className="py-24 border-t-4 border-primary bg-secondary/30 glass-morph relative z-10">
       <div className="container mx-auto px-6">
         <div className="mb-16 animate-slide-in-up">
           <h2 className="text-5xl font-bold mb-4">
@@ -32,7 +32,7 @@ const Skills = () => {
               className="animate-slide-in-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="brutalist-border brutalist-shadow bg-card p-8">
+              <div className="brutalist-border brutalist-shadow bg-card/80 glass-morph p-8">
                 <h3 className="text-2xl font-bold mb-6 text-accent">{category.title}</h3>
                 <ul className="space-y-3">
                   {category.skills.map((skill, skillIndex) => (

@@ -39,7 +39,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="work" className="py-24 border-t-4 border-primary">
+    <section id="work" className="py-24 border-t-4 border-primary relative z-10">
       <div className="container mx-auto px-6">
         <div className="mb-16 animate-slide-in-up">
           <h2 className="text-5xl font-bold mb-4">
@@ -57,7 +57,7 @@ const Projects = () => {
               className="group animate-slide-in-up cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="brutalist-border bg-card hover:brutalist-shadow-accent transition-all duration-300">
+              <div className="brutalist-border bg-card/80 glass-morph hover:brutalist-shadow-accent transition-all duration-300">
                 <div className="aspect-square bg-secondary flex items-center justify-center border-b-4 border-primary">
                   <span className="text-6xl font-bold text-primary/10 group-hover:text-accent/30 transition-colors">
                     {index + 1}

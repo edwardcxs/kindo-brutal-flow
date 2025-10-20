@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center pt-20">
+    <section id="hero" className="min-h-screen flex items-center pt-20 relative z-10">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
@@ -42,7 +42,7 @@ const Hero = () => {
           
           <div className="animate-slide-in-right">
             <div className="relative">
-              <div className="brutalist-border brutalist-shadow aspect-square bg-secondary flex items-center justify-center overflow-hidden">
+              <div className="brutalist-border brutalist-shadow aspect-square bg-secondary/50 glass-morph flex items-center justify-center overflow-hidden">
                 <div className="text-9xl font-bold text-primary/10">EK</div>
               </div>
               <div className="absolute -bottom-4 -right-4 brutalist-border bg-accent w-32 h-32 flex items-center justify-center">

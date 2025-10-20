@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 border-t-4 border-primary">
+    <section id="contact" className="py-24 border-t-4 border-primary relative z-10">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16">
           <div className="animate-slide-in-left">
@@ -42,14 +42,14 @@ const Contact = () => {
             </p>
 
             <div className="space-y-6">
-              <div className="brutalist-border bg-card p-6">
+              <div className="brutalist-border bg-card/80 glass-morph p-6">
                 <p className="font-mono text-xs text-accent mb-2">EMAIL</p>
                 <a href="mailto:hello@edwardkindo.com" className="text-lg font-bold hover:text-accent transition-colors">
                   hello@edwardkindo.com
                 </a>
               </div>
 
-              <div className="brutalist-border bg-card p-6">
+              <div className="brutalist-border bg-card/80 glass-morph p-6">
                 <p className="font-mono text-xs text-accent mb-2">SOCIAL</p>
                 <div className="flex gap-6">
                   {['BEHANCE', 'DRIBBBLE', 'LINKEDIN'].map((social) => (

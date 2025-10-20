@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section id="about" className="py-24 border-t-4 border-primary">
+    <section id="about" className="py-24 border-t-4 border-primary relative z-10">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4 animate-slide-in-left">
@@ -24,7 +24,7 @@ const About = () => {
                 looks exceptional but delivers measurable results for users and businesses.
               </p>
               
-              <div className="brutalist-border brutalist-shadow bg-card p-8 mt-8">
+              <div className="brutalist-border brutalist-shadow bg-card/80 glass-morph p-8 mt-8">
                 <p className="font-mono text-sm uppercase mb-4 text-accent">Philosophy</p>
                 <p className="text-2xl font-bold leading-tight">
                   "Design is not just what it looks like. Design is how it works, how it feels, 
