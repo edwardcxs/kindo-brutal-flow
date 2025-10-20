@@ -1,49 +1,88 @@
+import { Sparkles } from "lucide-react";
+
 const Skills = () => {
   const skillCategories = [
     {
       title: "DESIGN",
-      skills: ["Brand Identity", "Typography", "Print Design", "Illustration", "Motion Graphics"]
+      skills: [
+        { name: "Brand Identity", level: 95 },
+        { name: "Typography", level: 90 },
+        { name: "Print Design", level: 88 },
+        { name: "Illustration", level: 85 },
+        { name: "Motion Graphics", level: 82 }
+      ]
     },
     {
       title: "UI/UX",
-      skills: ["User Research", "Wireframing", "Prototyping", "Design Systems", "Interaction Design"]
+      skills: [
+        { name: "User Research", level: 92 },
+        { name: "Wireframing", level: 95 },
+        { name: "Prototyping", level: 93 },
+        { name: "Design Systems", level: 90 },
+        { name: "Interaction Design", level: 88 }
+      ]
     },
     {
       title: "TOOLS",
-      skills: ["Figma", "Adobe CC", "Sketch", "Blender", "After Effects"]
+      skills: [
+        { name: "Figma", level: 98 },
+        { name: "Adobe Creative Cloud", level: 95 },
+        { name: "Sketch", level: 85 },
+        { name: "Blender", level: 75 },
+        { name: "After Effects", level: 80 }
+      ]
     }
   ];
 
   return (
-    <section id="skills" className="py-24 border-t-4 border-primary bg-secondary/30 glass-morph relative z-10">
+    <section id="skills" className="py-32 border-t-4 border-primary/20 bg-secondary/20 glass-morph relative z-10">
       <div className="container mx-auto px-6">
-        <div className="mb-16 animate-slide-in-up">
-          <h2 className="text-5xl font-bold mb-4">
+        <div className="mb-20 animate-slide-in-up">
+          <div className="inline-block mb-6">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-0.5 bg-accent" />
+              <span className="font-mono text-sm text-accent tracking-wider">EXPERTISE</span>
+            </div>
+          </div>
+          <h2 className="text-5xl md:text-7xl font-bold leading-tight">
             SKILLS &
             <br />
-            <span className="text-accent">EXPERTISE_</span>
+            <span className="text-gradient glow-text">CAPABILITIES</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
           {skillCategories.map((category, index) => (
             <div
               key={index}
               className="animate-slide-in-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="brutalist-border brutalist-shadow bg-card/80 glass-morph p-8">
-                <h3 className="text-2xl font-bold mb-6 text-accent">{category.title}</h3>
-                <ul className="space-y-3">
+              <div className="brutalist-border brutalist-shadow-hover bg-card/60 glass-morph p-8 h-full">
+                <div className="flex items-center gap-3 mb-8">
+                  <Sparkles className="w-6 h-6 text-accent" />
+                  <h3 className="text-2xl font-bold text-accent">{category.title}</h3>
+                </div>
+                <ul className="space-y-6">
                   {category.skills.map((skill, skillIndex) => (
-                    <li
-                      key={skillIndex}
-                      className="flex items-center gap-3 group cursor-pointer"
-                    >
-                      <span className="w-2 h-2 bg-primary group-hover:bg-accent transition-colors"></span>
-                      <span className="text-sm font-medium group-hover:text-accent transition-colors">
-                        {skill}
-                      </span>
+                    <li key={skillIndex} className="group">
+                      <div className="flex justify-between mb-2">
+                        <span className="text-sm font-medium group-hover:text-accent transition-colors">
+                          {skill.name}
+                        </span>
+                        <span className="text-xs font-mono text-muted-foreground">
+                          {skill.level}%
+                        </span>
+                      </div>
+                      <div className="h-1 bg-muted overflow-hidden">
+                        <div 
+                          className="h-full bg-accent transition-all duration-1000 ease-out"
+                          style={{ 
+                            width: `${skill.level}%`,
+                            animationDelay: `${(index * 0.15) + (skillIndex * 0.05)}s`
+                          }}
+                        />
+                      </div>
                     </li>
                   ))}
                 </ul>
@@ -52,18 +91,38 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="mt-16 grid md:grid-cols-3 gap-8 animate-slide-in-up">
-          <div className="brutalist-border bg-accent p-8 text-center">
-            <div className="text-5xl font-bold text-accent-foreground mb-2">50+</div>
-            <p className="font-mono text-sm text-accent-foreground">PROJECTS</p>
+        <div className="grid md:grid-cols-4 gap-6 animate-slide-in-up">
+          <div className="brutalist-border brutalist-shadow-hover bg-gradient-to-br from-accent to-accent/80 p-8 text-center group cursor-pointer">
+            <div className="text-6xl font-bold text-accent-foreground mb-2 group-hover:scale-110 transition-transform">
+              50+
+            </div>
+            <p className="font-mono text-sm text-accent-foreground/80 uppercase tracking-wider">
+              Projects Delivered
+            </p>
           </div>
-          <div className="brutalist-border bg-primary p-8 text-center">
-            <div className="text-5xl font-bold text-primary-foreground mb-2">30+</div>
-            <p className="font-mono text-sm text-primary-foreground">CLIENTS</p>
+          <div className="brutalist-border brutalist-shadow-hover bg-gradient-to-br from-primary to-primary/80 p-8 text-center group cursor-pointer">
+            <div className="text-6xl font-bold text-primary-foreground mb-2 group-hover:scale-110 transition-transform">
+              30+
+            </div>
+            <p className="font-mono text-sm text-primary-foreground/80 uppercase tracking-wider">
+              Happy Clients
+            </p>
           </div>
-          <div className="brutalist-border bg-card p-8 text-center">
-            <div className="text-5xl font-bold mb-2">5+</div>
-            <p className="font-mono text-sm">YEARS</p>
+          <div className="brutalist-border brutalist-shadow-hover bg-card/60 glass-morph p-8 text-center group cursor-pointer">
+            <div className="text-6xl font-bold mb-2 text-accent group-hover:scale-110 transition-transform">
+              5+
+            </div>
+            <p className="font-mono text-sm text-muted-foreground uppercase tracking-wider">
+              Years Experience
+            </p>
+          </div>
+          <div className="brutalist-border brutalist-shadow-hover bg-card/60 glass-morph p-8 text-center group cursor-pointer">
+            <div className="text-6xl font-bold mb-2 text-accent group-hover:scale-110 transition-transform">
+              15+
+            </div>
+            <p className="font-mono text-sm text-muted-foreground uppercase tracking-wider">
+              Awards Won
+            </p>
           </div>
         </div>
       </div>
