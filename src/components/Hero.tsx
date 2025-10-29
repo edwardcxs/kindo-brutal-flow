@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import heroProfile from "@/assets/hero-profile.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -64,9 +65,13 @@ const Hero = () => {
           
           <div className="animate-slide-in-right lg:animate-float">
             <div className="relative">
-              <div className="brutalist-border brutalist-shadow-accent aspect-square bg-secondary/30 glass-morph flex items-center justify-center overflow-hidden relative group">
-                <div className="text-9xl font-bold text-primary/5 group-hover:text-accent/10 transition-colors duration-500">EK</div>
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="brutalist-border brutalist-shadow-accent aspect-square bg-secondary/30 overflow-hidden relative group">
+                <img 
+                  src={heroProfile} 
+                  alt="Edward Kindo - Graphics Designer & UI/UX Specialist"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
               <div className="absolute -bottom-6 -right-6 brutalist-border bg-accent w-40 h-40 flex items-center justify-center animate-scale-in">
                 <span className="text-accent-foreground font-mono text-lg font-bold text-center leading-tight">
