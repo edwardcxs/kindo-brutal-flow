@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -73,6 +74,7 @@ const Navigation = () => {
           </div>
 
           <div className="flex items-center gap-4">
+            <ThemeToggle />
             <div className="hidden md:flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-accent animate-glow" />
               <span className="text-xs font-mono text-muted-foreground">AVAILABLE</span>

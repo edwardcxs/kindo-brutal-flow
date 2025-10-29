@@ -57,42 +57,25 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 98%;
+  /* Theme variations */
+  [data-theme="cyan"] {
+    --accent: 189 94% 43%;
+    --ring: 189 94% 43%;
+  }
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 98%;
+  [data-theme="purple"] {
+    --accent: 271 91% 65%;
+    --ring: 271 91% 65%;
+  }
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 98%;
+  [data-theme="green"] {
+    --accent: 142 76% 36%;
+    --ring: 142 76% 36%;
+  }
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 5%;
-
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 210 100% 50%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 210 100% 50%;
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 210 100% 50%;
-    --sidebar-primary-foreground: 0 0% 5%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 210 100% 50%;
+  [data-theme="orange"] {
+    --accent: 24 95% 53%;
+    --ring: 24 95% 53%;
   }
 }
 
