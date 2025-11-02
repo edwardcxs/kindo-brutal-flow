@@ -9,7 +9,6 @@ import PolymorphismBackground from "@/components/PolymorphismBackground";
 const Index = () => {
   return (
     <div className="min-h-screen relative">
-      <PolymorphismBackground />
       <Navigation />
       <Hero />
       <Projects />
