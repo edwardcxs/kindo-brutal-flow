@@ -20,10 +20,13 @@ const Hero = () => {
               <span className="font-mono text-xs tracking-wider text-accent">GRAPHICS DESIGNER • UI/UX SPECIALIST</span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none">
-              <span className="block">EDWARD</span>
-              <span className="block text-gradient glow-text">KINDO</span>
-            </h1>
+            <div className="space-y-2">
+              <p className="text-2xl md:text-3xl text-muted-foreground font-medium">Hi I'm</p>
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none">
+                <span className="block">EDWARD</span>
+                <span className="block text-gradient glow-text">KINDO</span>
+              </h1>
+            </div>
             
             <p className="text-xl md:text-2xl max-w-xl text-muted-foreground leading-relaxed">
               Crafting <span className="text-accent font-bold">bold visual experiences</span> with modern design thinking. 
