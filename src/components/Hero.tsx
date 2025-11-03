@@ -27,17 +27,22 @@ const Hero = () => {
                 className="text-5xl md:text-7xl font-bold leading-tight whitespace-nowrap"
                 initial="hidden"
                 animate="visible"
-                transition={{ staggerChildren: 0.05, repeat: Infinity, repeatDelay: 2 }}
+                transition={{ 
+                  staggerChildren: 0.08,
+                  repeat: Infinity,
+                  repeatDelay: 1.5,
+                  repeatType: "loop"
+                }}
               >
                 {['E', 'd', 'w', 'a', 'r', 'd', ' '].map((char, i) => (
                   <motion.span
                     key={`edward-${i}`}
                     className="inline-block text-white"
                     variants={{
-                      hidden: { opacity: 0, filter: "blur(10px)", y: 20 },
+                      hidden: { opacity: 0, filter: "blur(8px)", y: 10 },
                       visible: { opacity: 1, filter: "blur(0px)", y: 0 }
                     }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
                   >
                     {char === ' ' ? '\u00A0' : char}
                   </motion.span>
@@ -47,10 +52,10 @@ const Hero = () => {
                     key={`kindo-${i}`}
                     className="inline-block text-gradient glow-text"
                     variants={{
-                      hidden: { opacity: 0, filter: "blur(10px)", y: 20 },
+                      hidden: { opacity: 0, filter: "blur(8px)", y: 10 },
                       visible: { opacity: 1, filter: "blur(0px)", y: 0 }
                     }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
                   >
                     {char}
                   </motion.span>
