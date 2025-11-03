@@ -23,7 +23,24 @@ const Hero = () => {
             <div className="space-y-2">
               <p className="text-2xl md:text-3xl text-muted-foreground font-medium">Hi I'm</p>
               <h1 className="text-5xl md:text-7xl font-bold leading-tight whitespace-nowrap">
-                <span className="text-white">Edward </span><span className="text-gradient glow-text">Kindo</span>
+                {['E', 'd', 'w', 'a', 'r', 'd', ' '].map((char, i) => (
+                  <span
+                    key={`edward-${i}`}
+                    className="inline-block text-white animate-fade-in"
+                    style={{ animationDelay: `${i * 0.1}s`, animationFillMode: 'backwards' }}
+                  >
+                    {char === ' ' ? '\u00A0' : char}
+                  </span>
+                ))}
+                {['K', 'i', 'n', 'd', 'o'].map((char, i) => (
+                  <span
+                    key={`kindo-${i}`}
+                    className="inline-block text-gradient glow-text animate-fade-in"
+                    style={{ animationDelay: `${(i + 7) * 0.1}s`, animationFillMode: 'backwards' }}
+                  >
+                    {char}
+                  </span>
+                ))}
               </h1>
             </div>
             
