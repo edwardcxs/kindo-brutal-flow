@@ -26,8 +26,11 @@ const Hero = () => {
                 {['E', 'd', 'w', 'a', 'r', 'd', ' '].map((char, i) => (
                   <span
                     key={`edward-${i}`}
-                    className="inline-block text-white animate-fade-in"
-                    style={{ animationDelay: `${i * 0.1}s`, animationFillMode: 'backwards' }}
+                    className="inline-block text-white"
+                    style={{ 
+                      animation: 'fade-in 0.3s ease-out infinite',
+                      animationDelay: `${i * 0.1}s`
+                    }}
                   >
                     {char === ' ' ? '\u00A0' : char}
                   </span>
@@ -35,8 +38,11 @@ const Hero = () => {
                 {['K', 'i', 'n', 'd', 'o'].map((char, i) => (
                   <span
                     key={`kindo-${i}`}
-                    className="inline-block text-gradient glow-text animate-fade-in"
-                    style={{ animationDelay: `${(i + 7) * 0.1}s`, animationFillMode: 'backwards' }}
+                    className="inline-block text-gradient glow-text"
+                    style={{ 
+                      animation: 'fade-in 0.3s ease-out infinite',
+                      animationDelay: `${(i + 7) * 0.1}s`
+                    }}
                   >
                     {char}
                   </span>
