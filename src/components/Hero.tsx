@@ -22,8 +22,8 @@ const Hero = () => {
             
             <div className="space-y-2">
               <p className="text-2xl md:text-3xl text-muted-foreground font-medium">Hi I'm</p>
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none">
-                <span className="text-white">EDWARD </span><span className="text-gradient glow-text">KINDO</span>
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none whitespace-nowrap">
+                <span className="text-white">Edward </span><span className="text-gradient glow-text">Kindo</span>
               </h1>
             </div>
             
