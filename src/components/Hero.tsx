@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroProfile from "@/assets/hero-profile.png";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -22,32 +23,39 @@ const Hero = () => {
             
             <div className="space-y-2">
               <p className="text-2xl md:text-3xl text-muted-foreground font-medium">Hi I'm</p>
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight whitespace-nowrap">
+              <motion.h1 
+                className="text-5xl md:text-7xl font-bold leading-tight whitespace-nowrap"
+                initial="hidden"
+                animate="visible"
+                transition={{ staggerChildren: 0.05, repeat: Infinity, repeatDelay: 2 }}
+              >
                 {['E', 'd', 'w', 'a', 'r', 'd', ' '].map((char, i) => (
-                  <span
+                  <motion.span
                     key={`edward-${i}`}
                     className="inline-block text-white"
-                    style={{ 
-                      animation: 'fade-in 0.3s ease-out infinite',
-                      animationDelay: `${i * 0.1}s`
+                    variants={{
+                      hidden: { opacity: 0, filter: "blur(10px)", y: 20 },
+                      visible: { opacity: 1, filter: "blur(0px)", y: 0 }
                     }}
+                    transition={{ duration: 0.5 }}
                   >
                     {char === ' ' ? '\u00A0' : char}
-                  </span>
+                  </motion.span>
                 ))}
                 {['K', 'i', 'n', 'd', 'o'].map((char, i) => (
-                  <span
+                  <motion.span
                     key={`kindo-${i}`}
                     className="inline-block text-gradient glow-text"
-                    style={{ 
-                      animation: 'fade-in 0.3s ease-out infinite',
-                      animationDelay: `${(i + 7) * 0.1}s`
+                    variants={{
+                      hidden: { opacity: 0, filter: "blur(10px)", y: 20 },
+                      visible: { opacity: 1, filter: "blur(0px)", y: 0 }
                     }}
+                    transition={{ duration: 0.5 }}
                   >
                     {char}
-                  </span>
+                  </motion.span>
                 ))}
-              </h1>
+              </motion.h1>
             </div>
             
             <p className="text-xl md:text-2xl max-w-xl mx-auto text-muted-foreground leading-relaxed">
