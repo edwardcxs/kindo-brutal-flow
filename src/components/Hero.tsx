@@ -24,7 +24,7 @@ const Hero = () => {
             <div className="space-y-2">
               <p className="text-2xl md:text-3xl text-muted-foreground font-medium">Hi I'm</p>
               <motion.h1 
-                className="text-5xl md:text-7xl font-bold leading-tight whitespace-nowrap"
+                className="text-6xl md:text-8xl font-bold leading-tight whitespace-nowrap"
                 initial="hidden"
                 animate="visible"
                 transition={{ 
@@ -34,7 +34,7 @@ const Hero = () => {
                   repeatType: "loop"
                 }}
               >
-                {['E', 'd', 'w', 'a', 'r', 'd', ' '].map((char, i) => (
+                {['E', 'D', 'W', 'A', 'R', 'D', ' '].map((char, i) => (
                   <motion.span
                     key={`edward-${i}`}
                     className="inline-block text-white"
@@ -47,7 +47,7 @@ const Hero = () => {
                     {char === ' ' ? '\u00A0' : char}
                   </motion.span>
                 ))}
-                {['K', 'i', 'n', 'd', 'o'].map((char, i) => (
+                {['K', 'I', 'N', 'D', 'O'].map((char, i) => (
                   <motion.span
                     key={`kindo-${i}`}
                     className="inline-block text-gradient glow-text"
