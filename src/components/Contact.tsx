@@ -1,33 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Mail, Linkedin, Github, Twitter, Send } from "lucide-react";
+import { Mail, Linkedin, Github, Twitter } from "lucide-react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   const socialLinks = [
     { icon: Mail, label: "EMAIL", href: "mailto:hello@edwardkindo.com", username: "hello@edwardkindo.com" },
     { icon: Linkedin, label: "LINKEDIN", href: "#", username: "/edwardkindo" },
@@ -37,9 +10,8 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-32 border-t-4 border-primary/20 relative z-10">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-20">
-          <div className="animate-slide-in-left">
+      <div className="container mx-auto px-6 max-w-3xl">
+        <div className="animate-slide-in-left">
             <div className="inline-block mb-6">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-0.5 bg-accent" />
@@ -85,63 +57,6 @@ const Contact = () => {
               </div>
             </div>
           </div>
-
-          <div className="animate-slide-in-right">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="font-mono text-xs uppercase mb-3 block text-accent tracking-wider">
-                  Your Name *
-                </label>
-                <Input
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="brutalist-border h-14 bg-card/60 glass-morph text-lg focus:border-accent transition-colors"
-                  placeholder="John Doe"
-                />
-              </div>
-
-              <div>
-                <label className="font-mono text-xs uppercase mb-3 block text-accent tracking-wider">
-                  Email Address *
-                </label>
-                <Input
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="brutalist-border h-14 bg-card/60 glass-morph text-lg focus:border-accent transition-colors"
-                  placeholder="john@example.com"
-                />
-              </div>
-
-              <div>
-                <label className="font-mono text-xs uppercase mb-3 block text-accent tracking-wider">
-                  Your Message *
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={8}
-                  className="w-full brutalist-border bg-card/60 glass-morph p-4 text-lg focus:outline-none focus:border-accent transition-colors resize-none"
-                  placeholder="Tell me about your project, timeline, and goals..."
-                />
-              </div>
-
-              <Button
-                type="submit"
-                className="brutalist-border brutalist-shadow-hover bg-accent text-accent-foreground hover:bg-accent/90 font-bold w-full h-14 text-lg group"
-              >
-                <Send className="mr-2 group-hover:translate-x-1 transition-transform" />
-                SEND MESSAGE
-              </Button>
-            </form>
-          </div>
-        </div>
 
         <div className="mt-32 pt-12 border-t-4 border-primary/20 text-center animate-fade-in">
           <div className="mb-6">
