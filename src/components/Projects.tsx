@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import momentumPoster from "@/assets/momentum-poster.jpg";
+import zenithPackaging from "@/assets/zenith-packaging.png";
 
 const Projects = () => {
   const projects = [
@@ -37,7 +38,8 @@ const Projects = () => {
       category: "GRAPHIC DESIGN",
       description: "Minimalist product packaging for premium lifestyle brand, emphasizing sustainable materials and elegant typography.",
       year: "2023",
-      tags: ["Packaging", "Branding", "Sustainability"]
+      tags: ["Packaging", "Branding", "Sustainability"],
+      image: zenithPackaging
     },
     {
       title: "PRISM DESIGN SYSTEM",
