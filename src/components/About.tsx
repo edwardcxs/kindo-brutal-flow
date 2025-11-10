@@ -30,7 +30,7 @@ const About = () => {
                 <span className="font-mono text-sm text-accent tracking-wider">INTRODUCTION</span>
               </div>
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
               ABOUT
               <br />
               <span className="text-gradient glow-text">ME</span>
@@ -60,7 +60,7 @@ const About = () => {
           </div>
           
           <div className="lg:col-span-7 animate-slide-in-up">
-            <div className="space-y-8 text-lg">
+            <div className="space-y-6 sm:space-y-8 text-base sm:text-lg">
               <p className="leading-relaxed text-muted-foreground">
                 I'm a <span className="font-bold text-accent">Graphics Designer</span> and{' '}
                 <span className="font-bold text-accent">UI/UX specialist</span> with over 5 years 
@@ -80,11 +80,11 @@ const About = () => {
                 create <span className="font-bold text-accent">lasting connections</span> between brands and their audiences.
               </p>
               
-              <div className="brutalist-border brutalist-shadow-accent bg-card/60 glass-morph p-8 mt-12 relative overflow-hidden group cursor-pointer">
+              <div className="brutalist-border brutalist-shadow-accent bg-card/60 glass-morph p-6 sm:p-8 mt-8 sm:mt-12 relative overflow-hidden group cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative z-10">
-                  <p className="font-mono text-sm uppercase mb-4 text-accent">Design Philosophy</p>
-                  <p className="text-2xl md:text-3xl font-bold leading-tight">
+                  <p className="font-mono text-xs sm:text-sm uppercase mb-3 sm:mb-4 text-accent">Design Philosophy</p>
+                  <p className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight">
                     "Design is not just what it looks like and feels like. 
                     Design is <span className="text-accent">how it works</span>, 
                     how it <span className="text-accent">transforms</span>, 

@@ -56,7 +56,7 @@ const Projects = () => {
               <span className="font-mono text-sm text-accent tracking-wider">PORTFOLIO</span>
             </div>
           </div>
-          <h2 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
             SELECTED
             <br />
             <span className="text-gradient glow-text">WORK</span>
@@ -64,7 +64,7 @@ const Projects = () => {
           <p className="font-mono text-sm text-muted-foreground mt-4">2023 — 2024</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -80,9 +80,9 @@ const Projects = () => {
                     <ExternalLink className="w-5 h-5 text-accent" />
                   </div>
                 </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <p className="font-mono text-xs text-accent mb-3 tracking-wider">{project.category}</p>
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors leading-tight">
+                <div className="p-4 sm:p-6 flex-1 flex flex-col">
+                  <p className="font-mono text-xs text-accent mb-2 sm:mb-3 tracking-wider">{project.category}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 group-hover:text-accent transition-colors leading-tight">
                     {project.title}
                   </h3>
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed flex-1">

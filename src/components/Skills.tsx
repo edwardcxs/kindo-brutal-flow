@@ -44,24 +44,24 @@ const Skills = () => {
               <span className="font-mono text-sm text-accent tracking-wider">EXPERTISE</span>
             </div>
           </div>
-          <h2 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
             SKILLS &
             <br />
             <span className="text-gradient glow-text">CAPABILITIES</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-20">
           {skillCategories.map((category, index) => (
             <div
               key={index}
               className="animate-slide-in-up"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="brutalist-border brutalist-shadow-hover bg-card/60 glass-morph p-8 h-full">
-                <div className="flex items-center gap-3 mb-8">
-                  <Sparkles className="w-6 h-6 text-accent" />
-                  <h3 className="text-2xl font-bold text-accent">{category.title}</h3>
+              <div className="brutalist-border brutalist-shadow-hover bg-card/60 glass-morph p-6 sm:p-8 h-full">
+                <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+                  <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
+                  <h3 className="text-xl sm:text-2xl font-bold text-accent">{category.title}</h3>
                 </div>
                 <ul className="space-y-6">
                   {category.skills.map((skill, skillIndex) => (
@@ -91,36 +91,36 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6 animate-slide-in-up">
-          <div className="brutalist-border brutalist-shadow-hover bg-gradient-to-br from-accent to-accent/80 p-8 text-center group cursor-pointer">
-            <div className="text-6xl font-bold text-accent-foreground mb-2 group-hover:scale-110 transition-transform">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 animate-slide-in-up">
+          <div className="brutalist-border brutalist-shadow-hover bg-gradient-to-br from-accent to-accent/80 p-4 sm:p-6 lg:p-8 text-center group cursor-pointer">
+            <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent-foreground mb-1 sm:mb-2 group-hover:scale-110 transition-transform">
               50+
             </div>
-            <p className="font-mono text-sm text-accent-foreground/80 uppercase tracking-wider">
+            <p className="font-mono text-xs sm:text-sm text-accent-foreground/80 uppercase tracking-wider">
               Projects Delivered
             </p>
           </div>
-          <div className="brutalist-border brutalist-shadow-hover bg-gradient-to-br from-primary to-primary/80 p-8 text-center group cursor-pointer">
-            <div className="text-6xl font-bold text-primary-foreground mb-2 group-hover:scale-110 transition-transform">
+          <div className="brutalist-border brutalist-shadow-hover bg-gradient-to-br from-primary to-primary/80 p-4 sm:p-6 lg:p-8 text-center group cursor-pointer">
+            <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-1 sm:mb-2 group-hover:scale-110 transition-transform">
               30+
             </div>
-            <p className="font-mono text-sm text-primary-foreground/80 uppercase tracking-wider">
+            <p className="font-mono text-xs sm:text-sm text-primary-foreground/80 uppercase tracking-wider">
               Happy Clients
             </p>
           </div>
-          <div className="brutalist-border brutalist-shadow-hover bg-card/60 glass-morph p-8 text-center group cursor-pointer">
-            <div className="text-6xl font-bold mb-2 text-accent group-hover:scale-110 transition-transform">
+          <div className="brutalist-border brutalist-shadow-hover bg-card/60 glass-morph p-4 sm:p-6 lg:p-8 text-center group cursor-pointer">
+            <div className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-1 sm:mb-2 text-accent group-hover:scale-110 transition-transform">
               5+
             </div>
-            <p className="font-mono text-sm text-muted-foreground uppercase tracking-wider">
+            <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">
               Years Experience
             </p>
           </div>
-          <div className="brutalist-border brutalist-shadow-hover bg-card/60 glass-morph p-8 text-center group cursor-pointer">
-            <div className="text-6xl font-bold mb-2 text-accent group-hover:scale-110 transition-transform">
+          <div className="brutalist-border brutalist-shadow-hover bg-card/60 glass-morph p-4 sm:p-6 lg:p-8 text-center group cursor-pointer">
+            <div className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-1 sm:mb-2 text-accent group-hover:scale-110 transition-transform">
               15+
             </div>
-            <p className="font-mono text-sm text-muted-foreground uppercase tracking-wider">
+            <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">
               Awards Won
             </p>
           </div>
