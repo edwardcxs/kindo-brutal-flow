@@ -24,7 +24,7 @@ const Hero = () => {
             <div className="space-y-2">
               <p className="text-2xl md:text-3xl text-muted-foreground font-medium">Hi I'm</p>
               <motion.h1 
-                className="text-4xl md:text-6xl font-bold leading-tight whitespace-nowrap"
+                className="text-6xl md:text-8xl font-bold leading-tight whitespace-nowrap"
                 initial="hidden"
                 animate="visible"
                 transition={{ 
