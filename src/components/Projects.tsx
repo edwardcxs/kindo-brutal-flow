@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import momentumPoster from "@/assets/momentum-poster.jpg";
 
 const Projects = () => {
   const projects = [
@@ -21,7 +22,8 @@ const Projects = () => {
       category: "GRAPHIC DESIGN",
       description: "Bold typographic exploration for cultural festival, featuring experimental layouts and vibrant color schemes.",
       year: "2023",
-      tags: ["Typography", "Print", "Art Direction"]
+      tags: ["Typography", "Print", "Art Direction"],
+      image: momentumPoster
     },
     {
       title: "APEX DASHBOARD",
@@ -73,9 +75,17 @@ const Projects = () => {
             >
               <div className="brutalist-border bg-card/60 glass-morph brutalist-shadow-hover h-full flex flex-col">
                 <div className="aspect-[4/3] bg-secondary/30 flex items-center justify-center border-b-4 border-primary relative overflow-hidden">
-                  <span className="text-8xl font-bold text-primary/5 group-hover:text-accent/20 transition-all duration-500 group-hover:scale-110">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
+                  {project.image ? (
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  ) : (
+                    <span className="text-8xl font-bold text-primary/5 group-hover:text-accent/20 transition-all duration-500 group-hover:scale-110">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  )}
                   <div className="absolute top-4 right-4 w-10 h-10 border-2 border-accent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <ExternalLink className="w-5 h-5 text-accent" />
                   </div>
