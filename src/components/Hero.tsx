@@ -20,7 +20,7 @@ const Hero = () => {
               <img 
                 src={heroProfile} 
                 alt="Edward Kindo" 
-                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-full shadow-lg"
+                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-full"
               />
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 border-2 border-accent/30 glass-morph">
