@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           <div className="animate-slide-in-left space-y-8 text-center">
             <motion.div 
-              className="flex justify-center mb-6 mt-12"
+              className="flex justify-center mb-6 mt-8"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
