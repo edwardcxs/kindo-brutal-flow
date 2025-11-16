@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="animate-slide-in-left space-y-8 text-center">
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-6 mt-8">
               <img 
                 src={heroProfile} 
                 alt="Edward Kindo" 
