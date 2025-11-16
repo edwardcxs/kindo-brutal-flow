@@ -16,6 +16,13 @@ const Hero = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="animate-slide-in-left space-y-8 text-center">
+            <div className="flex justify-center mb-6">
+              <img 
+                src={heroProfile} 
+                alt="Edward Kindo" 
+                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-accent/30 shadow-lg"
+              />
+            </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 border-2 border-accent/30 glass-morph">
               <Sparkles className="w-4 h-4 text-accent animate-glow" />
               <span className="font-mono text-xs tracking-wider text-accent">GRAPHICS DESIGNER • UI/UX SPECIALIST</span>
