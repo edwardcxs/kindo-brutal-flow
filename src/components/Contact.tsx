@@ -1,11 +1,9 @@
-import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Instagram } from "lucide-react";
 
 const Contact = () => {
   const socialLinks = [
     { icon: Mail, label: "EMAIL", href: "mailto:hello@edwardkindo.com", username: "hello@edwardkindo.com" },
-    { icon: Linkedin, label: "LINKEDIN", href: "#", username: "/edwardkindo" },
-    { icon: Github, label: "GITHUB", href: "#", username: "/edwardkindo" },
-    { icon: Twitter, label: "TWITTER", href: "#", username: "@edwardkindo" }
+    { icon: Instagram, label: "INSTAGRAM", href: "#", username: "@edwardkindo" }
   ];
 
   return (
